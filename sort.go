@@ -24,12 +24,26 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org/>
 */
-package insertionsort
+package main
 
 func Sort(a []int) []int {
 	for i := 1; i < len(a); i++ {
 		j := i
 		for j > 0 && a[j-1] > a[j] {
+			temp := a[j]
+			a[j] = a[j-1]
+			a[j-1] = temp
+			j--
+		}
+	}
+
+	return a
+}
+
+func SortDec(a []int) []int {
+	for i := 1; i < len(a); i++ {
+		j := i
+		for j > 0 && a[j-1] < a[j] {
 			temp := a[j]
 			a[j] = a[j-1]
 			a[j-1] = temp

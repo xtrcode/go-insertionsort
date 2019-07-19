@@ -24,7 +24,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org/>
 */
-package insertionsort
+package main
 
 import (
 	"math/rand"
@@ -36,7 +36,7 @@ var a []int
 func randArray(ln int) []int {
 	var a []int
 	for i := 0; i < ln; i++ {
-		a = append(a, rand.Int())
+		a = append(a, rand.Intn(10))
 	}
 	return a
 }

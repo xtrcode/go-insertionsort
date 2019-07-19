@@ -1,8 +1,12 @@
 # Straightforward, in-place <strong>Insertion sort</strong> implementation in Go
 ## Usage
 ```go
-sorted := Sort([]int{3,8,4,9,6,5,1,7,0,2,8})
-fmt.Println(sorted)
+sortedInc := Sort([]int{31,41,59,26,41,58})
+fmt.Println(sortedInc) # [26 31 41 41 58 59]
+
+sortedDec := SortDec([]int{31,41,59,26,41,58})
+fmt.Println(sortedDec) # [59 58 41 41 31 26]
+
 ```
 
 ## Benchmark
